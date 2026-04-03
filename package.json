@@ -7,7 +7,7 @@
     "build": "pnpm run typecheck && pnpm -r --if-present run build",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
-    "start": "pnpm -F @workspace/api-server run start"
+    "start": "pnpm --dir artifacts/api-server run start"
   },
   "private": true,
   "devDependencies": {

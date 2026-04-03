@@ -25,3 +25,20 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+### Background Remover (`artifacts/bg-remover`)
+- **URL**: `/` (root)
+- **Type**: React + Vite (frontend only, no backend)
+- **Theme**: Pink shades (rose, pink, fuchsia)
+- **Features**:
+  - Upload images via drag-and-drop or file picker
+  - Background removal using Canvas API + flood-fill algorithm
+  - Edge feathering for smooth results
+  - Image enhancement via custom Transformation.js module (`src/lib/transformation.ts`)
+  - Download result as transparent PNG
+- **Key files**:
+  - `src/pages/home.tsx` — main UI
+  - `src/lib/transformation.ts` — custom Transformation.js module (Transform class, removeBackground, featherEdges)
+  - `src/index.css` — pink-themed design system
